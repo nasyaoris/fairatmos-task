@@ -17,10 +17,11 @@ const ProjectListTable: React.FC<iProjectListTableProps> = ({
 }) => {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Title</TableCell>
+          <TableCell align="left">Id</TableCell>
+            <TableCell align="left">Title</TableCell>
             <TableCell align="left">Description</TableCell>
             <TableCell align="left">Category</TableCell>
           </TableRow>
@@ -31,7 +32,10 @@ const ProjectListTable: React.FC<iProjectListTableProps> = ({
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+            <TableCell align="left">
+                {row.id}
+              </TableCell>
+              <TableCell align="left">
                 {row.title}
               </TableCell>
               <TableCell align="left">{row.description}</TableCell>
